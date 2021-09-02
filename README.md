@@ -15,7 +15,7 @@ At this moment, the project contains five classes.
  
  ### Class <strong>Players</strong>
 
-<p>This class was create to apply the methods Gatters and Setters. Also is used to request the move of corresponding player.</p>
+<p>This class was create to apply the methods Gatters and Setters. In this project is used to set a player name, also to call a name of player to make the respective move.</p>
 
  
  
