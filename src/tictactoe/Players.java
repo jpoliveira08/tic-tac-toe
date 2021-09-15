@@ -19,6 +19,7 @@ public class Players {
 		public String getPlayer2() {
 			return player2;
 		}
-
+		
+		
 		
 }

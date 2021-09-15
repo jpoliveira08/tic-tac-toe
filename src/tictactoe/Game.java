@@ -3,6 +3,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
+
 public class Game {
 	
 	public static void main(String[] args) {
@@ -19,16 +20,29 @@ public class Game {
 		boolean test = false;
 		int move1, move2;
 		boolean isValid = true;
-
+		String nome1, nome2;
+		
 		//Testando o tabuleiro
 		board.showingGameBoard();
 		
 		//Definindo o nome dos Jogadores
 		System.out.println("Name of Player 1: ");
-		player.setPlayer1(entrada.nextLine());
+		nome1 = entrada.nextLine();
 		System.out.println("Name of Player 2: ");
-		player.setPlayer2(entrada.nextLine());
+		nome2 = entrada.nextLine();
 		
+		//Sorteando os jogadores
+		if(Math.random() > 0.5) {
+			player.setPlayer1(nome1);
+			player.setPlayer2(nome2);
+		}
+		else {
+			player.setPlayer1(nome2);
+			player.setPlayer2(nome1);	
+		}
+		
+		
+		System.out.println("\n" + player.getPlayer1() + ", will play with: " + piece.getPiecePLayer1() + "\n" + player.getPlayer2() + ", will play with: " + piece.getPiecePLayer2() + "\n");
 		while(win.winCheck(board) != true) {
 			if(i % 2 == 0) {
 				System.out.println(player.getPlayer1() + ", Make your move: ");//Dizendo para o jogador 1 fazer sua jogada
