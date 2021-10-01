@@ -20,25 +20,24 @@ public class Game {
 		boolean test = false;
 		int move1, move2;
 		boolean isValid = true;
-		String nome1, nome2;
+		String name1, name2;
 		
 		//Showing the gameBoard
 		board.showingGameBoard();
 		
 		//Name of Players
-		System.out.println("Name of Player 1: ");
-		nome1 = entry.nextLine();
-		System.out.println("Name of Player 2: ");
-		nome2 = entry.nextLine();
+		System.out.println("Enter player names: ");
+		name1 = entry.nextLine();
+		name2 = entry.nextLine();
 		
 		//Sort the first player
 		if(Math.random() > 0.5) {
-			player.setPlayer1(nome1);
-			player.setPlayer2(nome2);
+			player.setPlayer1(name1);
+			player.setPlayer2(name2);
 		}
 		else {
-			player.setPlayer1(nome2);
-			player.setPlayer2(nome1);	
+			player.setPlayer1(name2);
+			player.setPlayer2(name1);	
 		}
 		
 		
